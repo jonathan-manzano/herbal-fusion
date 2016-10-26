@@ -1,0 +1,12 @@
+<% unless user_signed_in? %>
+<div class="jumbotron">
+  <h1>Welcome to recipe!</h1>
+  <p>
+        You've found the home page for the
+  </p>
+  <p>
+        <!-- <a href="#">Sign Up Now!</a> -->
+        <%= link_to("Sign Up Now!", new_user_registration_path, class: "btn btn-success btn-lg" )%>
+  </p>
+</div>
+<% end %>

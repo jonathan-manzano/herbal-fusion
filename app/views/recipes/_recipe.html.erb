@@ -1,0 +1,18 @@
+<div class="box">
+  <%= link_to image_tag(recipe.image.url(:medium), :class => "img-rounded img-responsive"), recipe %>
+  <p class="description">
+    <%= recipe.description %>
+  </p>
+  <p>
+    <strong>
+      Posted by <%= recipe.user.name %>
+    </strong>
+  </p>
+
+  <% if current_user == recipe.user %>
+  <p>
+    <%= link_to 'Edit', edit_recipe_path(recipe) %>
+    <%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </p>
+  <% end %>
+</div>

@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-6  col-md-offset-3">
+      <div class="well well-md">
+
+    <%= simple_form_for(@recipe) do |f| %>
+      <%= f.error_notification %>
+      <%= f.full_error :image_file_size, class: "alert alert-error" %>
+      <%= f.full_error :image_content_type, class: "alert alert-error" %>
+
+<div class="form-group">
+        <%= f.input :image, label: "Upload and image", class: "form-control" %><br>
+        <%= f.text_field :description, as: :text, class: "form-control", placeholder: "Description..."%>
+        <%= f.text_field :title, as: :text, class: "form-control", placeholder: "Title..."%>
+        <%= f.text_field :serving_size, as: :integer, class: "form-control", placeholder: "Serving Size..."%>
+        <%= f.text_field :time, as: :time, class: "form-control", placeholder: "Time..."%>
+        <%= f.text_field :ingredients, as: :text, class: "form-control", placeholder: "Ingredients..."%>
+        <%= f.text_field :steps, as: :text, class: "form-control", placeholder: "Steps..."%>
+        <%= f.text_field :allergies, as: :text, class: "form-control", placeholder: "Allergies..."%>
+
+</div>
+
+      <div class="form-actions">
+        <%= f.button :submit, class: "btn btn-default" %>
+      </div>
+    <% end %>
+</div>
+</div>
+</div>
+
