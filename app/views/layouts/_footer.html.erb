@@ -2,5 +2,9 @@
     <small>
       <!-- <a href="http://onemothrails.com">One Month Rails</a> -->
 <h1>footer</h1>
+<h1>Comments</h1>
+<% @comment.each do |i| %>
+	<%= i.content %>
+<% end %>
     </small>
   </div>
