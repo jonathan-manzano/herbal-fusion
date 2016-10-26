@@ -1,4 +1,16 @@
 <% unless user_signed_in? %>
+
+
+body {
+     margin: 0;
+     background: url('http://blog.getnugg.com/wp-content/uploads/2015/09/IMG_8255.jpg');
+     background-size: 1440px 800px;
+     background-repeat:no-repeat;
+    display: compact;
+     font: 13px/18px "Helvetica Neue", Helvetica, Arial,sans-serif; 
+    }
+
+
 <div class="jumbotron">
   <h1>Welcome to recipe!</h1>
   <p>
@@ -9,4 +21,7 @@
         <%= link_to("Sign Up Now!", new_user_registration_path, class: "btn btn-success btn-lg" )%>
   </p>
 </div>
+
+
+
 <% end %>
