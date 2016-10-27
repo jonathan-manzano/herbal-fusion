@@ -58,7 +58,7 @@ class RecipesController < ApplicationController
   # DELETE /recipes/1
   # DELETE /recipes/1.json
   def destroy
-    @recipe = User.find(params[:id]).recipes.find(params[:id])
+    @recipe = User.find(current_user).recipes.find(params[:id])
 
     @recipe.destroy
     respond_to do |format|
