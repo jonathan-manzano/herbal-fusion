@@ -2,11 +2,25 @@
   <div class="col-md-6 col-md-offset-3 ">
 
 <div class="box box2">
-          <%= image_tag(@recipe.image(:medium), :class => "img-rounded img-responsive" )%>
+         <%= image_tag(@recipe.image(:medium), :class => "img-rounded img-responsive" )%>
 
       <p class="title">
         <label> Title: </label><%= @recipe.title %><br>
        </p>
+         <% if @recipe.users_liked.include?(current_user) %>
+           <form action='/likes/<%= @recipe.likes.find_by(user_id:current_user).id %>' method='post'>
+             <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+             <input type='hidden' name='_method' value='delete'>
+             <input type='image' src='/images/Leafe_green_png.png' alt='Submit' class="leaf">
+           </form>
+         <% else %>
+           <form action='/likes' method='post'>
+             <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+             <input type='hidden' name='recipe_id' value='<%= @recipe.id %>'>
+             <input type='image' src='/images/Leafe_grey.png' alt='Submit' class="leaf">
+           </form>
+         <% end %>
+         <p class="count"><%= @recipe.likes.count %> <label>Likes</label></p>
        <p class="content">
          <label>Time: </label> <%= @recipe.time %> <label>minutes</label><br>
          <label>Serving Size: </label> <%= @recipe.serving_size %> <label>people</label><br>
@@ -19,7 +33,7 @@
           Posted by <%= @recipe.user.name %>
         </strong>
       </p>
-      
+
       <%= link_to 'Back', recipes_path %>
   </div>
   <h2>Comments</h2>
@@ -36,4 +50,3 @@
 </div>
 
 </div>
-
