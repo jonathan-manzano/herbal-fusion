@@ -4,16 +4,16 @@
 <div class="box box2">
           <%= image_tag(@recipe.image(:medium), :class => "img-rounded img-responsive" )%>
 
-      <p class="description">
-       Title:<%= @recipe.title %><br>
+      <p class="title">
+        <label> Title: </label><%= @recipe.title %><br>
        </p>
        <p class="content">
-       Description:<%= @recipe.description %><br>
-       Steps:<%= @recipe.steps %><br>
-       Time:<%= @recipe.time %> minutes<br>
-       Serving Size:<%= @recipe.serving_size %><br>
-       Ingredients<%= @recipe.ingredients %><br>
-       Allergies:<%= @recipe.allergies %><br>
+         <label>Time: </label> <%= @recipe.time %> <label>minutes</label><br>
+         <label>Serving Size: </label> <%= @recipe.serving_size %> <label>people</label><br>
+         <label>Ingredients: </label> <%= @recipe.ingredients %><br>
+         <label>Steps: </label><%= @recipe.steps %><br>
+         <label>Allergies: </label><%= @recipe.allergies %><br>
+         <label>Description: </label><%= @recipe.description %><br>
       <p>
         <strong>
           Posted by <%= @recipe.user.name %>

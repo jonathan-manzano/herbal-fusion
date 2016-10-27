@@ -14,8 +14,11 @@
       </form>
     <% end %>
   <%= link_to image_tag(recipe.image.url(:medium), :class => "img-rounded img-responsive"), recipe %>
+  <p class="title">
+    <%=recipe.title%>
+  </p>
   <p class="description">
-    <%= recipe.description %>
+    <%=recipe.description%>
   </p>
   <p>
     <strong>
