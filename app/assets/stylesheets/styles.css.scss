@@ -4,6 +4,57 @@ $navbar-default-bg: white;
 $navbar-default-border: white;
 @import 'bootstrap';
 
+
+ #recipe{
+  margin: 5%;
+  text-align: center;
+  margin-left: 20%;
+  padding-bottom: 10%;
+  padding: 0%;
+  font-size: 110%;
+  line-height: 1.4em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  width: 80%;
+  background-color: #e3e3e3;
+ }
+
+  #recipe h1{
+  text-align: center;
+  color: black;
+  display: inline-block;
+  border-radius: 0%;
+   }
+
+#editUser{
+  margin: 5%;
+  margin-left: 30%;
+  padding-bottom: 20%;
+  padding: 3%;
+  font-size: 11px;
+  line-height: 1.4em;
+  float: left;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  width: 50%;
+   background-color: white;
+}
+
+#about{ 
+  margin: 8%;
+  margin-left: 20%;
+  padding: 2%;
+  font-size: 11px;
+  line-height: 1.4em;
+  float: left;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  width: 70%;
+   background-color: white;
+
+}
+ 
+
 body {
   padding-top: 60px;
   background-image: url(/img/bg.jpg);
@@ -22,20 +73,69 @@ body {
 // required for jQuery Masonry
 
 .box {
-  margin: 5px;
-  padding: 5px;
-  font-size: 11px;
+  margin: 1%;
+  padding: .5%;
+  font-size: 100%;
   line-height: 1.4em;
   float: left;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  width: 400px;
+  width: 40%;
    background-color: white;
 }
 
 .box2{
-   width: 300px;
+  margin: 2%;
+  margin-left: 30%;
+  font-size: 100%;
+  line-height: 1.4em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  width: 100%;
+  background-color: white;
+
 }
+
+  .box2 .title{
+     text-align: center;
+    padding-bottom: 10px;
+     font-weight: bold;
+     font-size: 140%;
+      text-decoration: underline;
+
+  }
+
+  .box2 .content{
+      padding-left: 3%;
+      background-color: white;
+    font-size: 100%;
+      
+       
+    }
+    .box2 .content .recipelist{ 
+    white-space: pre-line;
+    margin-top: -5%;
+    margin-bottom: -15%;
+    
+    
+    }
+
+    .box2 .content .steplist{ 
+
+    white-space: pre-line;; 
+ 
+    font-size: 100%;
+    }
+
+
+  .box2 .recipeUser{
+    text-align: center;
+  }
+  
+  .box .ButtonRecipeShow{
+   text-align: center;
+    font-weight: 900;
+  }
 
 .box img{
   display: block;
@@ -50,7 +150,7 @@ body {
 }
 
 .description{
-  margin: 10px 0 5px;
+  margin: 10% 0 5px;
 }
 
 .blockquote {
@@ -85,17 +185,4 @@ margin-top: 5px;
 
 .blockquote cite:before {
 content: "\2014 \2009";
-}
-
-.leaf {
-  width: 40px;
-  height: 30px;
-  padding: 0;
-  border: none;
-  background: none;
-  margin-left: 120px;
-}
-
-.links, .leaf {
-  display: inline-block;
 }
