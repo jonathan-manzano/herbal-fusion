@@ -1,7 +1,7 @@
 class Recipe < ActiveRecord::Base
   has_attached_file :image, styles: { medium: "320x500>" }
   belongs_to :user
-  has_many :likes
+  has_many :likes, dependent: :destroy
   has_many :users_liked, through: :likes, source: :user
   has_many :comments, dependent: :destroy
   has_many :users_commented, through: :likes, source: :user
