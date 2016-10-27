@@ -84,3 +84,16 @@ margin-top: 5px;
 .blockquote cite:before {
 content: "\2014 \2009";
 }
+
+.leaf {
+  width: 40px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  background: none;
+  margin-left: 120px;
+}
+
+.links, .leaf {
+  display: inline-block;
+}
