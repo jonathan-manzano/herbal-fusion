@@ -1,6 +1,18 @@
 <div class="box">
   <% @recipes.each do |recipe| %>
-    <a href="/likes"><%= recipe.likes.count %> like this</a> </p>
+    <% if recipe.users_liked.include?(current_user) %>
+      <form action='/likes/<%= recipe.likes.find_by(user_id:current_user).id %>' method='post'>
+        <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+        <input type='hidden' name='_method' value='delete'>
+        <input type='submit' value='Unlike'>
+      </form>
+    <% else %>
+      <form action='/likes' method='post'>
+        <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+        <input type='hidden' name='recipe_id' value='<%= recipe.id %>'>
+        <input type='submit' value='Like'>
+      </form>
+    <% end %>
   <% end %>
   <%= link_to image_tag(recipe.image.url(:medium), :class => "img-rounded img-responsive"), recipe %>
   <p class="description">
@@ -19,3 +31,6 @@
   </p>
   <% end %>
 </div>
+
+
+  <a href="/likes"><%= recipe.likes.count %> like this</a> </p>
