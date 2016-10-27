@@ -9,13 +9,13 @@
 
 <div class="form-group">
         <%= f.input :image, label: "Upload and image", class: "form-control" %><br>
-        <%= f.text_field :description, as: :text, class: "form-control", placeholder: "Description..."%>
         <%= f.text_field :title, as: :string, class: "form-control", placeholder: "Title..."%>
-        <%= f.text_field :serving_size, as: :integer, class: "form-control", placeholder: "Serving Size..."%>
-        <%= f.text_field :time, as: :integer, class: "form-control", placeholder: "Time..."%>
+        <%= f.text_field :serving_size, as: :integer, class: "form-control", placeholder: "Serving Size as a number..."%>
+        <%= f.text_field :time, as: :integer, class: "form-control", placeholder: "Time in minutes..."%>
+        <%= f.text_field :allergies, as: :string, class: "form-control", placeholder: "Allergies..."%>
         <%= f.text_field :ingredients, as: :text, class: "form-control", placeholder: "Ingredients..."%>
         <%= f.text_field :steps, as: :text, class: "form-control", placeholder: "Steps..."%>
-        <%= f.text_field :allergies, as: :string, class: "form-control", placeholder: "Allergies..."%>
+        <%= f.text_field :description, as: :text, class: "form-control", placeholder: "Description..."%>
 
 </div>
 
