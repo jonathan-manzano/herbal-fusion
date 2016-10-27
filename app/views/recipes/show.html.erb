@@ -1,28 +1,41 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3 ">
-
 <div class="box box2">
           <%= image_tag(@recipe.image(:medium), :class => "img-rounded img-responsive" )%>
 
       <p class="description">
        Title:<%= @recipe.title %><br>
+       <br>
        </p>
-       <p class="content">
-       Description:<%= @recipe.description %><br>
-       Steps:<%= @recipe.steps %><br>
-       Time:<%= @recipe.time %> minutes<br>
-       Serving Size:<%= @recipe.serving_size %><br>
-       Ingredients<%= @recipe.ingredients %><br>
-       Allergies:<%= @recipe.allergies %><br>
-      <p>
-        <strong>
+    <div class="content">
+       <b>Time:</b> <%= @recipe.time %> minutes<br>
+       <br>
+
+       <b>Serving Size:</b> <%= @recipe.serving_size %><br>
+        <br>
+      <b>Allergies:</b> <%= @recipe.allergies %><br>
+       <br>
+       
+         <div class ="recipelist">
+         <b>Ingredients: </b> 
+           <%= @recipe.ingredients %> 
+           </div>
+          <div class ="steplist">
+          <b>Steps:</b><%= @recipe.steps %>
+         </div>
+       <b>Description:</b><%= @recipe.description %><br>
+  
+         <h4> </b>
           Posted by <%= @recipe.user.name %>
-        </strong>
-      </p>
-      
-      <%= link_to 'Back', recipes_path %>
+      </h4> </b>
+
+     
+</div>
+      <div class = "ButtonRecipeShow">
+        <%= link_to 'Back', recipes_path %>
+      </div>
+
   </div>
 </div>
-
 </div>
 
