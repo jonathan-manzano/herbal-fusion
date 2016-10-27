@@ -6,13 +6,14 @@
 
       <p class="description">
        Title:<%= @recipe.title %><br>
+       </p>
+       <p class="content">
        Description:<%= @recipe.description %><br>
        Steps:<%= @recipe.steps %><br>
        Time:<%= @recipe.time %> minutes<br>
        Serving Size:<%= @recipe.serving_size %><br>
        Ingredients<%= @recipe.ingredients %><br>
        Allergies:<%= @recipe.allergies %><br>
-      </p>
       <p>
         <strong>
           Posted by <%= @recipe.user.name %>
