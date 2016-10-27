@@ -6,6 +6,8 @@ Omr::Application.routes.draw do
   root 'recipes#index'
   get 'user_root' => 'recipes#index', as: :user_root
   get 'about' => 'pages#about'
+
+  post '/comments' => 'comments#create'
   ## match '/about', to: 'pages#about', via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
