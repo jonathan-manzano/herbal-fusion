@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 20161027014202) do
 
   create_table "comments", force: true do |t|
     t.string   "content"
+    t.integer  "user_id"
+    t.integer  "recipe_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
