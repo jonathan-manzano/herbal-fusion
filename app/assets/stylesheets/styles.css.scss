@@ -6,7 +6,7 @@ $navbar-default-border: white;
 
 body {
   padding-top: 60px;
-  background-image: url('http://i67.tinypic.com/2e501l1.jpg');
+  background-image: url(/img/bg.jpg);
 }
 
 // @import 'bootstrap-responsive';
@@ -29,9 +29,7 @@ body {
   float: left;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  border-radius: 5px;
-  box-shadow: 1px 1px 10px #444;
-  width: 214px;
+  width: 400px;
    background-color: white;
 }
 
@@ -55,7 +53,7 @@ body {
 font-family: Georgia, serif;
 font-size: 18px;
 font-style: italic;
-width: 500px;
+width: 400px;
 margin: 0.25em 0;
 padding: 0.35em 40px;
 line-height: 1.45;
