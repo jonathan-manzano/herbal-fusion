@@ -89,7 +89,13 @@ content: "\2014 \2009";
   padding: 0;
   border: none;
   background: none;
-  margin-left: 120px;
+  margin-left: 240px;
+  border: solid grey 1px;
+  background-color: #d580ff;
+}
+
+.count {
+  margin-left: 240px;
 }
 
 .links, .leaf {
