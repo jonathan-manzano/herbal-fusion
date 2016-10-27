@@ -4,8 +4,8 @@
 <div class="box box2">
          <%= image_tag(@recipe.image(:medium), :class => "img-rounded img-responsive" )%>
 
-      <p class="description">
-       Title:<%= @recipe.title %><br>
+      <p class="title">
+        <label> Title: </label><%= @recipe.title %><br>
        </p>
          <% if @recipe.users_liked.include?(current_user) %>
            <form action='/likes/<%= @recipe.likes.find_by(user_id:current_user).id %>' method='post'>
@@ -22,12 +22,12 @@
          <% end %>
          <p class="count"><%= @recipe.likes.count %> <label>Likes</label></p>
        <p class="content">
-       Description:<%= @recipe.description %><br>
-       Steps:<%= @recipe.steps %><br>
-       Time:<%= @recipe.time %> minutes<br>
-       Serving Size:<%= @recipe.serving_size %><br>
-       Ingredients<%= @recipe.ingredients %><br>
-       Allergies:<%= @recipe.allergies %><br>
+         <label>Time: </label> <%= @recipe.time %> <label>minutes</label><br>
+         <label>Serving Size: </label> <%= @recipe.serving_size %> <label>people</label><br>
+         <label>Ingredients: </label> <%= @recipe.ingredients %><br>
+         <label>Steps: </label><%= @recipe.steps %><br>
+         <label>Allergies: </label><%= @recipe.allergies %><br>
+         <label>Description: </label><%= @recipe.description %><br>
       <p>
         <strong>
           Posted by <%= @recipe.user.name %>
@@ -36,6 +36,17 @@
 
       <%= link_to 'Back', recipes_path %>
   </div>
+  <h2>Comments</h2>
+  <% @comment.each do |comment| %>
+    <%= comment.content %>
+  <% end %>
+
+  <form action="/comments" method='post'>
+    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+    <input type="text" name="content">
+    <input type='hidden' name='recipe_id' value='<%= @recipe.id %>'>
+    <input type="submit" value="Post a Comment!">
+  </form>
 </div>
 
 </div>
