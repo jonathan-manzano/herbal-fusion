@@ -96,7 +96,7 @@ body {
 
 }
 
-  .box2 .description{
+  .box2 .title{
      text-align: center;
     padding-bottom: 10px;
      font-weight: bold;
@@ -143,6 +143,10 @@ body {
    -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+}
+
+.title{
+  margin: 10px 0 5px;
 }
 
 .description{

@@ -2,34 +2,45 @@
   <div class="col-md-6 col-md-offset-3 ">
 <div class="box box2">
           <%= image_tag(@recipe.image(:medium), :class => "img-rounded img-responsive" )%>
-
-      <p class="description">
-       Title:<%= @recipe.title %><br>
-       <br>
+      <p class="title">
+        <label> Title: </label><%= @recipe.title %><br>
        </p>
     <div class="content">
-       <b>Time:</b> <%= @recipe.time %> minutes<br>
-       <br>
+         <label>Time: </label> <%= @recipe.time %> <label>minutes</label><br>
+         <label>Serving Size: </label> <%= @recipe.serving_size %> <label>people</label><br>
 
-       <b>Serving Size:</b> <%= @recipe.serving_size %><br>
-        <br>
-      <b>Allergies:</b> <%= @recipe.allergies %><br>
-       <br>
-       
          <div class ="recipelist">
-         <b>Ingredients: </b> 
-           <%= @recipe.ingredients %> 
-           </div>
-          <div class ="steplist">
-          <b>Steps:</b><%= @recipe.steps %>
+            <label>Ingredients: </label></br>
+            <%= @recipe.ingredients %> 
          </div>
-       <b>Description:</b><%= @recipe.description %><br>
-  
-         <h4> </b>
-          Posted by <%= @recipe.user.name %>
-      </h4> </b>
 
-     
+        <div class ="steplist">
+            <label>Steps: </label><br>
+            <%= @recipe.steps %><br>
+         </div>
+
+         <label>Allergies: </label><%= @recipe.allergies %><br>
+         <label>Description: </label><%= @recipe.description %><br>
+      <p>
+        <strong>
+          Posted by <%= @recipe.user.name %>
+        </strong>
+      </p>
+  </div>
+      <%= link_to 'Back', recipes_path %>
+  </div>
+  <h2>Comments</h2>
+  <% @comment.each do |comment| %>
+    <%= comment.content %>
+  <% end %>
+
+  <form action="/comments" method='post'>
+    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+    <input type="text" name="content">
+    <input type='hidden' name='recipe_id' value='<%= @recipe.id %>'>
+    <input type="submit" value="Post a Comment!">
+  </form>
+>>>>>>> master
 </div>
       <div class = "ButtonRecipeShow">
         <%= link_to 'Back', recipes_path %>
