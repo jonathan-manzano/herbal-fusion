@@ -1,5 +1,6 @@
 Omr::Application.routes.draw do
   resources :recipes
+  resources :likes
 
   devise_for :users
   root 'recipes#index'

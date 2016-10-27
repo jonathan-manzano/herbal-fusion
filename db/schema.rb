@@ -18,14 +18,21 @@ ActiveRecord::Schema.define(version: 20161026210723) do
 
   create_table "comments", force: true do |t|
     t.string   "content"
+    t.integer  "user_id"
+    t.integer  "recipe_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "likes", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "recipe_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "likes", ["recipe_id"], name: "index_likes_on_recipe_id", using: :btree
+  add_index "likes", ["user_id"], name: "index_likes_on_user_id", using: :btree
 
   create_table "recipes", force: true do |t|
     t.text     "description"

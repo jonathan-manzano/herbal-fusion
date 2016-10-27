@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   has_many :recipes
   has_many :comments, dependent: :destroy
   has_many :recipes_commented, through: :comments, source: :recipe
+  has_many :likes, dependent: :destroy
+  has_many :recipes_liked, through: :likes, source: :recipe
 
 
 end
