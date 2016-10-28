@@ -4,31 +4,31 @@ $navbar-default-bg: white;
 $navbar-default-border: white;
 @import 'bootstrap';
 
- 
- .recipe{
+
+.recipe{
   margin: .1%;
   text-align: center;
   margin-left: 10%;
   margin-right: 10%;
-  }
+}
 
-  .recipe h1{
+.recipe h1{
   text-align: center;
   color: white;
   display: inline-block;
   border-radius: 0%;
   font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
-   }
+ }
 
-  .recipe  #NewRecipeBackButton{
-   text-align: center;
-   font-size: 130%;
+.recipe  #NewRecipeBackButton{
+  text-align: center;
+  font-size: 130%;
   display: inline-block;
-    margin-top: -90%;
-    background-color: #e3e3e3;
-  }
+  margin-top: -90%;
+  background-color: #e3e3e3;
+}
 .editRecipe h1{
-  colour white 
+  colour: white; 
 }
 .editRecipe{
   margin: .1%;
@@ -42,14 +42,14 @@ $navbar-default-border: white;
   font-size: 130%;
   display: inline;
   margin-top: -90%;
- 
-  }
-  #back, #submit{
-  display: inline;
-  }
-  
 
- 
+}
+#back, #submit{
+  display: inline;
+}
+
+
+
 #editUser{
   margin: 5%;
   margin-left: 30%;
@@ -61,7 +61,7 @@ $navbar-default-border: white;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   width: 50%;
-   background-color: white;
+  background-color: white;
 }
 .comments{
   margin: 8%;
@@ -73,8 +73,8 @@ $navbar-default-border: white;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   width: 100%;
-   background-color: white;
-  
+  background-color: white;
+
 }
 #about{ 
   margin: 8%;
@@ -86,10 +86,10 @@ $navbar-default-border: white;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   width: 70%;
-   background-color: white;
+  background-color: white;
 
 }
- 
+
 
 body {
   padding-top: 60px;
@@ -101,10 +101,12 @@ body {
 .footer {
   margin-top: 50px;
   color: $gray;
-  a {
-      color: $gray;
   }
+
+a {
+  color: $gray;
 }
+
 
 // required for jQuery Masonry
 
@@ -119,7 +121,7 @@ body {
   width: 40%;
    background-color: white;
 }
-  .box .leaf{
+.box .leaf{
   padding: .5%;
   margin: -5% 50% 0% 70%;
   width: 100px;
@@ -127,9 +129,9 @@ body {
   border-style: solid;
   border-color: darkgreen;
 }
- .box .count{
- border-color: darkgreen;
- }
+.box .count{
+  border-color: darkgreen;
+}
 
 .box2{
   margin: 2%;
@@ -143,26 +145,26 @@ body {
 
 }
 
-  .box2 .title{
-     text-align: center;
-    padding-bottom: 10px;
-     font-weight: bold;
-     font-size: 140%;
-      text-decoration: underline;
+.box2 .title{
+  text-align: center;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: 110%;
+  text-decoration: underline;
 
-  }
+}
 
-  .box2 .content{
-      padding-left: 3%;
-      background-color: white;
-    font-size: 100%;
-      
-       
-    }
-    .box2 .content .recipelist{ 
-    white-space: pre-line;
-    margin-bottom: -15%;
-    }
+.box2 .content{
+  padding-left: 3%;
+  background-color: white;
+  white-space: pre-line;
+  font-size: 100%; 
+}
+
+.box2 .content .recipelist{ 
+  white-space: pre-line;
+  margin-bottom: -15%;
+}
 
 .box2 .leaf{
   padding: .5%;
@@ -174,40 +176,39 @@ body {
 }
 .box2 .count{
   padding: .5%;
-  margin: -5% 50% 0% 61%;
+  margin: -4.2% 55% 0% 63%;
   width: 100px;
   height: auto;
- 
- 
 }
 
-    .box2 .content .steplist{ 
-    margin-top: 15%;
-    white-space: pre-line;; 
-    margin-bottom: -15%;
-    font-size: 100%;
-    }
+.box2 .content .steplist{ 
+  margin-top: 15%;
+  white-space: pre-line;
+  margin-bottom: -15%;
+  font-size: 100%;
+}
 
 
-  .box2 .recipeUser{
-    text-align: center;
-  }
-  .box2 .showlikes{
+.box2 .recipeUser{
+  text-align: center;
+}
+
+.box2 .showlikes {
   border-style: solid;
   border-color: darkgreen;
-  }
+}
 
 
-  .box .ButtonRecipeShow{
-   text-align: center;
-    font-size: 200%;
-     
-  }
+.box .ButtonRecipeShow{
+  text-align: center;
+  font-size: 200%;
+   
+}
 
 .box img{
   display: block;
   width: 100%;
-   -webkit-border-radius: 5px;
+  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
@@ -221,35 +222,35 @@ body {
 }
 
 .blockquote {
-font-family: Georgia, serif;
-font-size: 18px;
-font-style: italic;
-width: 400px;
-margin: 0.25em 0;
-padding: 0.35em 40px;
-line-height: 1.45;
-position: relative;
-color: #383838;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-style: italic;
+  width: 400px;
+  margin: 0.25em 0;
+  padding: 0.35em 40px;
+  line-height: 1.45;
+  position: relative;
+  color: #383838;
 }
 
 .blockquote:before {
-display: block;
-padding-left: 10px;
-content: "\201C";
-font-size: 80px;
-position: absolute;
-left: -20px;
-top: -20px;
-color: #7a7a7a;
+  display: block;
+  padding-left: 10px;
+  content: "\201C";
+  font-size: 80px;
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  color: #7a7a7a;
 }
 
 .blockquote cite {
-color: #999999;
-font-size: 14px;
-display: block;
-margin-top: 5px;
+  color: #999999;
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
 }
 
 .blockquote cite:before {
-content: "\2014 \2009";
+  content: "\2014 \2009";
 }
