@@ -7,16 +7,26 @@
       <%= f.full_error :image_file_size, class: "alert alert-error" %>
       <%= f.full_error :image_content_type, class: "alert alert-error" %>
 
-<div class="form-group">
+<div>
         <%= f.input :image, label: "Upload and image", class: "form-control" %><br>
+        <br>
         <%= f.text_field :title, as: :string, class: "form-control", placeholder: "Title..."%>
-        <%= f.text_field :serving_size, as: :integer, class: "form-control", placeholder: "Serving Size as a number..."%>
-        <%= f.text_field :time, as: :integer, class: "form-control", placeholder: "Time in minutes..."%>
+        <br>
+           <%= f.text_field :time, as: :integer, class: "form-control", placeholder: "Time..."%>
+           <br>
+        <%= f.text_field :serving_size, as: :integer, class: "form-control", placeholder: "Serving Size..."%>
+          <br>
         <%= f.text_field :allergies, as: :string, class: "form-control", placeholder: "Allergies..."%>
-        <%= f.text_field :ingredients, as: :text, class: "form-control", placeholder: "Ingredients..."%>
-        <%= f.text_field :steps, as: :text, class: "form-control", placeholder: "Steps..."%>
-        <%= f.text_field :description, as: :text, class: "form-control", placeholder: "Description..."%>
-
+        <br>
+             
+         <%= f.text_area :ingredients, as: :text, class: "form-control", placeholder: "Ingredients..." , :cols => "40", :rows => "9" %>
+      
+         <br>
+          <%= f.text_area :steps, as: :text, class: "form-control", placeholder: "Steps..." , :cols => "40", :rows => "9" %>
+         <br>
+          
+          <%= f.text_area :description, as: :text, class: "form-control", placeholder: "Description..." , :cols => "40", :rows => "9" %>
+           <br>
 </div>
 
       <div class="form-actions">
