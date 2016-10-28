@@ -1,64 +1,54 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3 ">
+
 <div class="box box2">
-          <%= image_tag(@recipe.image(:medium), :class => "img-rounded img-responsive" )%>
+         <%= image_tag(@recipe.image(:medium), :class => "img-rounded img-responsive" )%>
+
       <p class="title">
         <label> Title: </label><%= @recipe.title %><br>
        </p>
-    <div class="content">
+         <% if @recipe.users_liked.include?(current_user) %>
+           <form action='/likes/<%= @recipe.likes.find_by(user_id:current_user).id %>' method='post'>
+             <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+             <input type='hidden' name='_method' value='delete'>
+             <input type='image' src='/images/Leafe_green_png.png' alt='Submit' class="leaf">
+           </form>
+         <% else %>
+           <form action='/likes' method='post'>
+             <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+             <input type='hidden' name='recipe_id' value='<%= @recipe.id %>'>
+             <input type='image' src='/images/Leafe_grey.png' alt='Submit' class="leaf">
+           </form>
+         <% end %>
+         <p class="count"><%= @recipe.likes.count %> <label>Likes</label></p>
+       <p class="content">
          <label>Time: </label> <%= @recipe.time %> <label>minutes</label><br>
          <label>Serving Size: </label> <%= @recipe.serving_size %> <label>people</label><br>
-
-         <div class ="recipelist">
-            <label>Ingredients: </label></br>
-            <%= @recipe.ingredients %> 
-         </div>
-
-        <div class ="steplist">
-            <label>Steps: </label><br>
-            <%= @recipe.steps %><br>
-            <br>
-         </div>
-         <br>
-         <label>Allergies:   </label> <p> <%= @recipe.allergies %><br></p>
-         <label>Description: </label> <p> <%= @recipe.description %><br> </p>
+         <label>Ingredients: </label> <%= @recipe.ingredients %><br>
+         <label>Steps: </label><%= @recipe.steps %><br>
+         <label>Allergies: </label><%= @recipe.allergies %><br>
+         <label>Description: </label><%= @recipe.description %><br>
       <p>
         <strong>
           Posted by <%= @recipe.user.name %>
         </strong>
       </p>
-  </div>
-  <div class = "ButtonRecipeShow">
-      <%= link_to 'Back', recipes_path %>
-      </div>
-  </div>
 
+      <%= link_to 'Back', recipes_path %>
+  </div>
+  <div class="comments"
   <h2>Comments</h2>
   <% @comment.each do |comment| %>
-    <h4><%= comment.content %></h4>
-    <% if comment.user_id == current_user.id %>
-      <form action="/comments/<%= comment.id %>" method="post">
-        <input type="hidden" name="_method" value="delete">
-        <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-        <input type="submit" value="Delete Comment">
-      </form>
-    <% end %>
+    <%= comment.content %>
   <% end %>
-  
-    <form action="/comments" method='post'>
-      <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-      <!-- <input type="textarea" rows="4" name="content"> -->
-      <textarea class="form-control" rows="3" name="content"></textarea>
-      <input type='hidden' name='recipe_id' value='<%= @recipe.id %>'>
-      <input type="submit" value="Post a Comment!">
-    </form>
-  
-</div>
-
-
-      
   </div>
- 
-</div>
+
+  <form action="/comments" method='post'>
+    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+    <input type="text" name="content">
+    <input type='hidden' name='recipe_id' value='<%= @recipe.id %>'>
+    <input type="submit" value="Post a Comment!">
+  </form>
 </div>
 
+</div>
