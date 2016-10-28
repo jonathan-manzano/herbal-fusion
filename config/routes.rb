@@ -10,6 +10,11 @@ Omr::Application.routes.draw do
   post '/comments' => 'comments#create'
 
   delete '/comments/:id' => 'comments#destroy'
+
+  delete '/users' => 'devise/registrations#destroy'
+  # delete '/recipes/:id' => 'recipes#destroy'
+
+  
   ## match '/about', to: 'pages#about', via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
