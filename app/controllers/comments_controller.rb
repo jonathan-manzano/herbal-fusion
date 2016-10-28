@@ -8,9 +8,15 @@ class CommentsController < ApplicationController
 
   def show
     @comment = User.find([:id]).comments.all
+    @comment2 = User.find([:id]).comments.find(params[:comment_id])
+    
+    puts @comment2
   end
 
   def destroy
-    @comment = Comment.find(:id).destroy
+    @comment = Comment.find(params[:id]).destroy
+    puts @comment
+    
+    redirect_to :back
   end
 end

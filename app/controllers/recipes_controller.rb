@@ -12,7 +12,11 @@ class RecipesController < ApplicationController
   # GET /recipes/1.json
   def show
     @comment = Recipe.find(params[:id]).comments.all
+    # @comment2 = Recipe.find(params[:id]).comments.find(params[:id])
+    # binding.pry
     puts @comment
+    puts session[:id]
+    puts "dogs"
   end
 
   # GET /recipes/new

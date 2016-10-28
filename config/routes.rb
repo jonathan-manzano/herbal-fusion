@@ -8,6 +8,8 @@ Omr::Application.routes.draw do
   get 'about' => 'pages#about'
 
   post '/comments' => 'comments#create'
+
+  delete '/comments/:id' => 'comments#destroy'
   ## match '/about', to: 'pages#about', via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.

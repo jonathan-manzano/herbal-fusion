@@ -16,6 +16,7 @@ gem 'rails-footnotes'
 gem 'hirb'
 gem 'bcrypt', '~> 3.1.7'
 gem 'paperclip-meta'
+gem 'pry'
 
 group :test, :development do
   gem 'rspec-rails'
