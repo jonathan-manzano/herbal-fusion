@@ -17,36 +17,35 @@
         <div class ="steplist">
             <label>Steps: </label><br>
             <%= @recipe.steps %><br>
+            <br>
          </div>
-
-         <label>Allergies: </label><%= @recipe.allergies %><br>
-         <label>Description: </label><%= @recipe.description %><br>
+         <br>
+         <label>Allergies:   </label> <p> <%= @recipe.allergies %><br></p>
+         <label>Description: </label> <p> <%= @recipe.description %><br> </p>
       <p>
         <strong>
           Posted by <%= @recipe.user.name %>
         </strong>
       </p>
   </div>
+  <div class = "ButtonRecipeShow">
       <%= link_to 'Back', recipes_path %>
-  </div>
-  <h2>Comments</h2>
-  <% @comment.each do |comment| %>
-    <%= comment.content %>
-  <% end %>
-
-  <form action="/comments" method='post'>
-    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-    <input type="text" name="content">
-    <input type='hidden' name='recipe_id' value='<%= @recipe.id %>'>
-    <input type="submit" value="Post a Comment!">
-  </form>
->>>>>>> master
-</div>
-      <div class = "ButtonRecipeShow">
-        <%= link_to 'Back', recipes_path %>
       </div>
-
   </div>
+  <div class = "comments">
+      <h2>Comments</h2>
+      <% @comment.each do |comment| %>
+        <%= comment.content %>
+      <% end %>
+
+      <form action="/comments" method='post'>
+        <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+        <input type="text" name="content">
+        <input type='hidden' name='recipe_id' value='<%= @recipe.id %>'>
+        <input type="submit" value="Post a Comment!">
+      </form>
+  </div>
+ 
 </div>
 </div>
 
