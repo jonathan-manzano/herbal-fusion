@@ -4,27 +4,31 @@ $navbar-default-bg: white;
 $navbar-default-border: white;
 @import 'bootstrap';
 
-
- #recipe{
-  margin: 5%;
+ 
+ .recipe{
+  margin: .1%;
   text-align: center;
-  margin-left: 20%;
-  padding-bottom: 10%;
-  padding: 0%;
-  font-size: 110%;
-  line-height: 1.4em;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  width: 80%;
-  background-color: #e3e3e3;
- }
+  margin-left: 10%;
+  margin-right: 10%;
+ 
+  
+  }
 
-  #recipe h1{
+  .recipe h1{
   text-align: center;
-  color: black;
+  color: white;
   display: inline-block;
   border-radius: 0%;
+  font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
    }
+
+  .recipe  #NewRecipeBackButton{
+   text-align: center;
+   font-size: 130%;
+  display: inline-block;
+    margin-top: -90%;
+    background-color: #e3e3e3;
+  }
 
 #editUser{
   margin: 5%;
@@ -96,7 +100,14 @@ body {
   width: 40%;
    background-color: white;
 }
-
+.box .leaf{
+  padding: .5%;
+  margin: -5% 30% 0% 40%;
+  width: 100px;
+  height: auto;
+  border-style: solid;
+  border-color: darkgreen;
+}
 .box2{
   margin: 2%;
   margin-left: 30%;
@@ -146,6 +157,7 @@ body {
   
   .box .ButtonRecipeShow{
    text-align: center;
+    font-size: 200%;
      
   }
 
