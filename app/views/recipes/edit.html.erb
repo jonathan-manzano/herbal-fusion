@@ -1,6 +1,17 @@
-<h1>Editing recipe</h1>
+<div class = "recipe">
+<h1>Editing Recipe</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @recipe %> |
-<%= link_to 'Back', recipes_path %>
+ 
+<div id = "editRecipeBackButton">
+	 <form id="submit" action="/recipes/<%= @recipe.id %> " >
+	 	<button type="submit">SHOW</button>
+	 </form>
+	 <form id="back" action="/">
+	 	<button type="submit">BACK</button>
+	 </form>
+
+
+</div>
+  

@@ -20,7 +20,9 @@
              <input type='image' src='/images/Leafe_grey.png' alt='Submit' class="leaf">
            </form>
          <% end %>
+         <div class = "count" >
          <p class="count"><%= @recipe.likes.count %> <label>Likes</label></p>
+         </div>
        <p class="content">
          <label>Time: </label> <%= @recipe.time %> <label>minutes</label><br>
          <label>Serving Size: </label> <%= @recipe.serving_size %> <label>people</label><br>

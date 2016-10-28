@@ -10,8 +10,6 @@ $navbar-default-border: white;
   text-align: center;
   margin-left: 10%;
   margin-right: 10%;
- 
-  
   }
 
   .recipe h1{
@@ -29,7 +27,29 @@ $navbar-default-border: white;
     margin-top: -90%;
     background-color: #e3e3e3;
   }
+.editRecipe h1{
+  colour white 
+}
+.editRecipe{
+  margin: .1%;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
 
+}
+.editRecipe #editRecipeBackButton{
+  text-align: center;
+  font-size: 130%;
+  display: inline;
+  margin-top: -90%;
+ 
+  }
+  #back, #submit{
+  display: inline;
+  }
+  
+
+ 
 #editUser{
   margin: 5%;
   margin-left: 30%;
@@ -44,8 +64,7 @@ $navbar-default-border: white;
    background-color: white;
 }
 .comments{
- margin: 8%;
-
+  margin: 8%;
   margin-left: 30%;
   padding: 5%;
   font-size: 11px;
@@ -100,14 +119,18 @@ body {
   width: 40%;
    background-color: white;
 }
-.box .leaf{
+  .box .leaf{
   padding: .5%;
-  margin: -5% 30% 0% 40%;
+  margin: -5% 50% 0% 70%;
   width: 100px;
   height: auto;
   border-style: solid;
   border-color: darkgreen;
 }
+ .box .count{
+ border-color: darkgreen;
+ }
+
 .box2{
   margin: 2%;
   margin-left: 30%;
@@ -139,9 +162,24 @@ body {
     .box2 .content .recipelist{ 
     white-space: pre-line;
     margin-bottom: -15%;
-    
-    
     }
+
+.box2 .leaf{
+  padding: .5%;
+  margin: -5% 50% 0% 70%;
+  width: 100px;
+  height: auto;
+  border-style: solid;
+  border-color: darkgreen;
+}
+.box2 .count{
+  padding: .5%;
+  margin: -5% 50% 0% 61%;
+  width: 100px;
+  height: auto;
+ 
+ 
+}
 
     .box2 .content .steplist{ 
     margin-top: 15%;
@@ -154,7 +192,12 @@ body {
   .box2 .recipeUser{
     text-align: center;
   }
-  
+  .box2 .showlikes{
+  border-style: solid;
+  border-color: darkgreen;
+  }
+
+
   .box .ButtonRecipeShow{
    text-align: center;
     font-size: 200%;
