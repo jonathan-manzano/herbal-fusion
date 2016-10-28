@@ -7,3 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.create!(name:"johnnyapple", email:"apple@seed.com", password:"rootroot", password_confirmation:"rootroot")
+User.create!(name:"Oscar", email:"oscar@ruby.com", password:"rootroot", password_confirmation:"rootroot")
+User.create!(name:"Brendan", email:"grainofsalt@js.com", password:"rootroot", password_confirmation:"rootroot")
+User.create!(name:"Pariece", email:"speakwithyour@chest.com", password:"rootroot", password_confirmation:"rootroot")
